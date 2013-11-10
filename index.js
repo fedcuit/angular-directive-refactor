@@ -10,7 +10,11 @@ angular.module('myApp', [])
     ]).directive('alert', [function() {
         return {
           restrict: 'EA',
-          template: '<div class="alert alert-success"><div ng-bind-html-unsafe="successMsg"></div></div>',
+          template: '<div class="alert alert-{{type}}"><div ng-bind-html-unsafe="message"></div></div>',
+          scope: {
+            message: "@",
+            type: "@"
+          },
           link: function() { }
         };
       }]);
