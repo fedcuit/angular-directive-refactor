@@ -13,10 +13,7 @@
         <div class="col-md-6">
           <h1>Directive Refactoring Demo</h1>
           <div>
-            <alert type="success" message="{{successMsg}}"></alert>
-            <alert type="info" message="{{infoMsg}}"></alert>
-            <alert type="warning" message="{{warningMsg}}"></alert>
-            <alert type="danger" message="{{dangerMsg}}"></alert>
+            <alert ng-repeat="alert in alerts" type="{{alert.type}}" message="{{alert.message}}"></alert>
           </div>
         </div>
       </div>
